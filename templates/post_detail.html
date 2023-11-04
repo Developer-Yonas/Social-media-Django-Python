@@ -1,0 +1,19 @@
+<!-- post_detail.html -->
+<span style="color: white; font-size: 35px; margin-right: 400px;"><b><u><a href="/">Home</a></u></b></span>
+<h1>{{ post.title }}</h1>
+<p>{{ post.content }}</p>
+
+<h2>Comments-</h2>
+{% if comments %}
+  
+    {% for comment in comments %}
+      
+        <p>Comment by: {{ comment.name }}</p>
+     <!--    <p>Email: {{ comment.email }}</p> -->
+        <p>Body: {{ comment.body }}</p>
+      
+    {% endfor %}
+  
+{% else %}
+  <!-- <p>No comments yet.</p> -->
+{% endif %}
